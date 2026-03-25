@@ -1,13 +1,13 @@
 package lectures_java;
 
 public class Recursion {
-	static void printNum(int num) {
+	static void printSeries(int num) {
 		if(num>0) {
-			printNum(num - 1);
-			System.out.println(num);
+			printSeries(num-1);
 		}
+		System.out.println(num);
 	}
 	public static void main(String[] args) {
-		printNum(6);
+		printSeries(5);
 	}
 }
