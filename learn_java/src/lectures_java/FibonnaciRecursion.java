@@ -2,17 +2,21 @@ package lectures_java;
 
 public class FibonnaciRecursion {
 	
-	static void fibRecursion(int inp) {
+	static int sum = 0;
+	static int num1 = 0;
+	static int num2 = 1;
+	
+    static void fibRecursion(int inp) {
 		if(inp > 0) {
-			sum = num1 + num2;
+			sum= num1 + num2;
+			num1 = num2;
+			num2 = sum;
+			System.out.println(sum);
+			fibRecursion(inp-1);
 		}
 	}
 	
 	public static void main(String[] args) {
-		
-	    int num1 = 0;
-		int num2 = 1;
-		int sum;
-		
+		fibRecursion(15);
 	}
 }
