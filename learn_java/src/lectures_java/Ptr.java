@@ -2,7 +2,7 @@ package lectures_java;
 
 import java.util.Arrays;
 class Ptr {
-    public static int getSecondLargest(int[] arr) {
+    public int getSecondLargest(int[] arr) {
         // code here
         Arrays.sort(arr);
         int max= arr[arr.length - 2 ];
@@ -15,7 +15,9 @@ class Ptr {
         }
     }
     public static void main(String args[]){
-        int array[] = {12,35,1,10,34,1};
-        getSecondLargest(array);
+        int myArray[] = {12,35,1,10,34,1};
+        
+        Ptr myObj = new Ptr();
+        myObj.getSecondLargest(myArray);
     }
 }
